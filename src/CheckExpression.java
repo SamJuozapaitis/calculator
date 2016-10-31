@@ -35,8 +35,8 @@ public class CheckExpression {
 			break;
 		}*/
 		if(tokenizedString.countTokens() == 1 && isNumber(tokenizedString.nextToken())){
-			System.out.println("This is not a valid statement");
-			System.exit(-1);
+			numberStack.add(tokenizedString.nextToken());
+			return numberStack;
 		}
 		
 		String currentToken;
@@ -107,6 +107,9 @@ public class CheckExpression {
 				}//end else
 				
 			}// to check if operan
+			else{
+				return null;
+			}
 			
 			
 		}//end while string tokenizer has more tokens
@@ -273,6 +276,10 @@ public class CheckExpression {
 						initialArray.add(indexOfCurrentOperation - 2, str);
 						initialArray.remove(indexOfCurrentOperation - 1);
 					}
+					if(operation.equals("(")){
+						return null;
+					}
+					
 					indexOfCurrentOperation = initialArray.size() - 1;
 					
 				}//end if
