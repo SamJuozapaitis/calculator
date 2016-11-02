@@ -16,11 +16,13 @@ public class calculatorGUI extends JFrame {
 
 	private JPanel contentPane;
 	private JTextField outPutScreen;
+	boolean shouldClear = false;
 
 	/**
 	 * Launch the application.
 	 */
 	public static void main(String[] args) {
+		
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
@@ -40,6 +42,7 @@ public class calculatorGUI extends JFrame {
 		
 		String expressionToEvaluate = "";
 		
+		
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 507);
 		contentPane = new JPanel();
@@ -58,6 +61,10 @@ public class calculatorGUI extends JFrame {
 		JButton button = new JButton("1");
 		button.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
+				if(shouldClear == true){
+					outPutScreen.setText("");
+					shouldClear = false;
+				}//end if
 				String currentStringOfNumber = outPutScreen.getText();
 				outPutScreen.setText(currentStringOfNumber + "1");
 			}
@@ -68,6 +75,10 @@ public class calculatorGUI extends JFrame {
 		JButton button_1 = new JButton("2");
 		button_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
+				if(shouldClear == true){
+					outPutScreen.setText("");
+					shouldClear = false;
+				}//end if
 				String currentStringOfNumber = outPutScreen.getText();
 				outPutScreen.setText(currentStringOfNumber + "2");
 			}
@@ -78,6 +89,10 @@ public class calculatorGUI extends JFrame {
 		JButton button_2 = new JButton("3");
 		button_2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
+				if(shouldClear == true){
+					outPutScreen.setText("");
+					shouldClear = false;
+				}//end if
 				String currentStringOfNumber = outPutScreen.getText();
 				outPutScreen.setText(currentStringOfNumber + "3");
 			}
@@ -88,6 +103,10 @@ public class calculatorGUI extends JFrame {
 		JButton button_3 = new JButton("4");
 		button_3.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
+				if(shouldClear == true){
+					outPutScreen.setText("");
+					shouldClear = false;
+				}//end if
 				String currentStringOfNumber = outPutScreen.getText();
 				outPutScreen.setText(currentStringOfNumber + "4");
 			}
@@ -98,6 +117,10 @@ public class calculatorGUI extends JFrame {
 		JButton button_4 = new JButton("0");
 		button_4.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
+				if(shouldClear == true){
+					outPutScreen.setText("");
+					shouldClear = false;
+				}//end if
 				String currentStringOfNumber = outPutScreen.getText();
 				outPutScreen.setText(currentStringOfNumber + "0");
 			}
@@ -108,6 +131,10 @@ public class calculatorGUI extends JFrame {
 		JButton button_5 = new JButton("5");
 		button_5.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
+				if(shouldClear == true){
+					outPutScreen.setText("");
+					shouldClear = false;
+				}//end if
 				String currentStringOfNumber = outPutScreen.getText();
 				outPutScreen.setText(currentStringOfNumber + "5");
 			}
@@ -118,6 +145,10 @@ public class calculatorGUI extends JFrame {
 		JButton button_6 = new JButton("6");
 		button_6.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
+				if(shouldClear == true){
+					outPutScreen.setText("");
+					shouldClear = false;
+				}//end if
 				String currentStringOfNumber = outPutScreen.getText();
 				outPutScreen.setText(currentStringOfNumber + "6");
 			}
@@ -128,6 +159,10 @@ public class calculatorGUI extends JFrame {
 		JButton button_7 = new JButton("7");
 		button_7.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
+				if(shouldClear == true){
+					outPutScreen.setText("");
+					shouldClear = false;
+				}//end if
 				String currentStringOfNumber = outPutScreen.getText();
 				outPutScreen.setText(currentStringOfNumber + "7");
 			}
@@ -138,6 +173,10 @@ public class calculatorGUI extends JFrame {
 		JButton button_8 = new JButton("8");
 		button_8.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
+				if(shouldClear == true){
+					outPutScreen.setText("");
+					shouldClear = false;
+				}//end if
 				String currentStringOfNumber = outPutScreen.getText();
 				outPutScreen.setText(currentStringOfNumber + "8");
 			}
@@ -148,6 +187,10 @@ public class calculatorGUI extends JFrame {
 		JButton button_9 = new JButton("9");
 		button_9.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
+				if(shouldClear == true){
+					outPutScreen.setText("");
+					shouldClear = false;
+				}//end if
 				String currentStringOfNumber = outPutScreen.getText();
 				outPutScreen.setText(currentStringOfNumber + "9");
 			}
@@ -158,6 +201,10 @@ public class calculatorGUI extends JFrame {
 		JButton button_10 = new JButton("+");
 		button_10.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
+				if(shouldClear == true){
+					outPutScreen.setText("");
+					shouldClear = false;
+				}//end if
 				String currentStringOfNumber = outPutScreen.getText();
 				outPutScreen.setText(currentStringOfNumber + " + ");
 			}
@@ -168,6 +215,10 @@ public class calculatorGUI extends JFrame {
 		JButton btnsubtract = new JButton("-");
 		btnsubtract.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
+				if(shouldClear == true){
+					outPutScreen.setText("");
+					shouldClear = false;
+				}//end if
 				String currentStringOfNumber = outPutScreen.getText();
 				outPutScreen.setText(currentStringOfNumber + " - ");
 			}
@@ -178,6 +229,10 @@ public class calculatorGUI extends JFrame {
 		JButton button_12 = new JButton("*");
 		button_12.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
+				if(shouldClear == true){
+					outPutScreen.setText("");
+					shouldClear = false;
+				}//end if
 				String currentStringOfNumber = outPutScreen.getText();
 				outPutScreen.setText(currentStringOfNumber + " * ");
 			}
@@ -188,6 +243,10 @@ public class calculatorGUI extends JFrame {
 		JButton button_13 = new JButton("^");
 		button_13.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
+				if(shouldClear == true){
+					outPutScreen.setText("");
+					shouldClear = false;
+				}//end if
 				String currentStringOfNumber = outPutScreen.getText();
 				outPutScreen.setText(currentStringOfNumber + " ^ ");
 			}
@@ -198,6 +257,10 @@ public class calculatorGUI extends JFrame {
 		JButton button_14 = new JButton("/");
 		button_14.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
+				if(shouldClear == true){
+					outPutScreen.setText("");
+					shouldClear = false;
+				}//end if
 				String currentStringOfNumber = outPutScreen.getText();
 				outPutScreen.setText(currentStringOfNumber + " / ");
 			}
@@ -208,6 +271,10 @@ public class calculatorGUI extends JFrame {
 		JButton button_15 = new JButton("(");
 		button_15.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
+				if(shouldClear == true){
+					outPutScreen.setText("");
+					shouldClear = false;
+				}//end if
 				String currentStringOfNumber = outPutScreen.getText();
 				outPutScreen.setText(currentStringOfNumber + "( ");
 			}
@@ -218,6 +285,10 @@ public class calculatorGUI extends JFrame {
 		JButton button_16 = new JButton(")");
 		button_16.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
+				if(shouldClear == true){
+					outPutScreen.setText("");
+					shouldClear = false;
+				}//end if
 				String currentStringOfNumber = outPutScreen.getText();
 				outPutScreen.setText(currentStringOfNumber + " )");
 			}
@@ -229,17 +300,24 @@ public class calculatorGUI extends JFrame {
 		JButton button_11 = new JButton("=");
 		button_11.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
+				if(shouldClear == true){
+					
+				}//end if
+				else{
+					shouldClear = true;
+					String originalNumberString = outPutScreen.getText();
+					ArrayList<String> array = CheckExpression.CheckExp(outPutScreen.getText());
+					//System.out.println(array);
+					String mathString = CheckExpression.doMath(array);
 				
-				ArrayList<String> array = CheckExpression.CheckExp(outPutScreen.getText());
-				//System.out.println(array);
-				String mathString = CheckExpression.doMath(array);
-				
-				if(mathString == null){
-					outPutScreen.setText("Not a valid expression");
-				}else{
-					outPutScreen.setText(mathString);
+					if(mathString == null){
+						outPutScreen.setText(originalNumberString + " is Not a valid expression");
+					}else if(mathString.equals("NaN")){
+						outPutScreen.setText(originalNumberString + " does not make sense mathematically.");
+					}else{
+						outPutScreen.setText(originalNumberString + " = " + mathString);
+					}
 				}
-				
 				//outPutScreen.setText(CheckExpression.doMath(array));
 				
 			}
@@ -259,6 +337,10 @@ public class calculatorGUI extends JFrame {
 		JButton btnnegative = new JButton("- (negative)");
 		btnnegative.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
+				if(shouldClear == true){
+					outPutScreen.setText("");
+					shouldClear = false;
+				}//end if
 				String currentStringOfNumber = outPutScreen.getText();
 				outPutScreen.setText(currentStringOfNumber + "-");
 			}
